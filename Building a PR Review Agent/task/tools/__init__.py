@@ -7,5 +7,8 @@ from .pr_commit_details_tool import get_pr_commit_details
 from .file_tool import get_file_contents_tool
 from .file_tool import get_file_contents
 
-from .add_username_tool import add_username_to_state
-from .add_username_tool import get_add_username_tool
+from .add_username_state_tool import add_username_to_state
+from .add_username_state_tool import get_add_username_to_state_tool
+
+from .add_draft_commnet_state_tool import add_comment_to_state
+from .add_draft_commnet_state_tool import get_add_comment_to_state_tool
