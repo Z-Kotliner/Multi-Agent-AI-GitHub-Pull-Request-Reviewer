@@ -9,8 +9,13 @@ async def post_final_review_tool(pr_number: int, comment_text: str):
     # Get PullRequest object
     pull_request = get_github_repo().get_pull(pr_number)
 
+    # Delete any pending Reviews
+    for review in pull_request.get_reviews():
+        if review.state == "PENDING":
+            review.delete()
+
     # Post the comment on the PR
-    pr_review = pull_request.create_review(body=comment_text)
+    pr_review = pull_request.create_review(body=comment_text, event="COMMENT")
 
     return pr_review
 
