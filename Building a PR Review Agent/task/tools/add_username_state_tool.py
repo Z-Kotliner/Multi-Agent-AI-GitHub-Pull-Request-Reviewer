@@ -7,7 +7,7 @@ async def add_username_to_state(ctx: Context, user_name: str) -> str:
     Use this tool for adding the draft comment to the state.
     """
     current_state = await ctx.store.get("state")
-    current_state["key"] = user_name
+    current_state["gathered_contexts"] = user_name
     await ctx.store.set("state", current_state)
     return f"State updated with {user_name} contexts. "
 
