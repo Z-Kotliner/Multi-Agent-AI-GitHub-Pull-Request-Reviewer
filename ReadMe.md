@@ -106,33 +106,29 @@ This project is built using a combination of **AI orchestration frameworks**, **
 | **LLM Integration** | [Groq LLMs](https://groq.com/) | Provides fast, low-latency model inference for comment generation and validation. |
 | **GitHub API Client** | [PyGithub](https://github.com/PyGithub/PyGithub) | Interfaces with GitHub’s API to fetch and post pull request data. |
 | **Environment Management** | [python-dotenv](https://pypi.org/project/python-dotenv/) | Loads GitHub tokens and environment variables from `.env`. |
-| **Core Python Libraries** | `os`, `json`, `requests`, etc. | Support utilities for I/O, configuration, and HTTP calls. |
+| **Core Python Libraries** | `os`, `json`, etc. | Support utilities for I/O, configuration, and HTTP calls. |
 
 ---
 
 ## How to Run
 
 ### 1. Clone the repository
-    
-    ```bash
-    git clone https://github.com/Z-Kotliner/multi-agent-pr-reviewer.git
+
+    git clone https://github.com/Z-Kotliner/Multi-Agent-AI-GitHub-Pull-Request-Reviewer.git
     cd multi-agent-pr-reviewer
     
 ### 2. Install dependencies
 
-    ```bash
     pip install -r requirements.txt 
 
 ### 3. Create a .env file in the project root:
 
-    ```bash
     GITHUB_TOKEN=your_github_personal_access_token
     GITHUB_REPOSITORY=your_repo_name as “username/repo-name" e.g Z-Kotliner/recipe-api
     GROQ_API_KEY=your_groq_api_key
     
 ### 4. Run the main program
 
-    ```bash
     python main.py
 
 ----
@@ -145,9 +141,8 @@ You can issue natural language commands such as: "Write review for Pull request 
 
 The following example is for "https://github.com/Z-Kotliner/recipe-api/pull/1"
 
-Example Console Session
+Example of Console Output Stream:
 
-    ```bash
     > python main.py
     Write review for Pull request number 1.
     Current agent: ReviewAndPostingAgent
